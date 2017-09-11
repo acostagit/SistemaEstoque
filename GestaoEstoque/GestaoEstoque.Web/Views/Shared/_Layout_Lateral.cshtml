@@ -1,0 +1,258 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle pull-left">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Controle de Estoque</a>
+
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Sair</a></li>
+                </ul>
+            </div>
+            <div class="main">
+                <div class="menu">
+                    <ul>
+                        <li class="visible-xs"><a href="#">Sair</a></li>
+                        <li class="active"><a href="#">Dashboard</a></li>
+                    </ul>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    Cadastros
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("Grupo de Produtos", "GrupoProduto", "Cadastro")</li>
+                                    <li>@Html.ActionLink("Marca de Produtos", "MarcaProduto", "Cadastro")</li>
+                                    <li>@Html.ActionLink("Locais de Armazenamento", "LocalArmazenamento", "Cadastro")</li>
+                                    <li>@Html.ActionLink("Unidades de Medida", "UnidadeMedida", "Cadastro")</li>
+                                    <li>@Html.ActionLink("Produtos", "Produto", "Cadastro")</li>
+                                    <li class="divider"></li>
+                                    <li>@Html.ActionLink("Países", "Pais", "Cadastro")</li>
+                                    <li>@Html.ActionLink("Estados", "Estado", "Cadastro")</li>
+                                    <li>@Html.ActionLink("Cidades", "Cidade", "Cadastro")</li>
+                                    <li class="divider"></li>
+                                    <li>@Html.ActionLink("Fornecedores", "Fornecedor", "Cadastro")</li>
+                                    <li class="divider"></li>
+                                    <li>@Html.ActionLink("Perfis de Usuários", "PerfilUsuario", "Cadastro")</li>
+                                    <li>@Html.ActionLink("Usuários", "Usuario", "Cadastro")</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    Operações
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("Entrada de Produtos", "EntradaEstoque", "Operacao")</li>
+                                    <li>@Html.ActionLink("Saída de Produtos", "SaidaEstoque", "Operacao")</li>
+                                    <li class="divider"></li>
+                                    <li>@Html.ActionLink("Lançamento de Perdas de Produtos", "LancamentoPerdaProduto", "Operacao")</li>
+                                    <li>@Html.ActionLink("Inventário de Estoque", "InventarioEstoque", "Operacao")</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    Relatórios
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("Posição de Estoque", "PosicaoEstoque", "Relatorio")</li>
+                                    <li>@Html.ActionLink("Ressuprimento", "Ressuprimento", "Relatorio")</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    Gráficos<span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("Perdas por Mês", "PerdaMes", "Grafico")</li>
+                                    <li>@Html.ActionLink("Entrada X Saída por Mês", "EntradaSaidaMes", "Grafico")</li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Ir para o site</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-4 text-center">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Visitas</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3>120.310</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 text-center">
+                                <div class="panel panel-success">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Visitas Únicas</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3>13.050</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 text-center">
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Bounce</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3>22%</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Ultimas Páginas</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Título</th>
+                                                    <th class="hidden-xs">Ações</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a href="#">Bootstrap 4 - O que há de novo?</a>
+                                                    </td>
+                                                    <td class="hidden-xs">
+                                                        <a class="btn btn-xs btn-info" href="#">Detalhes</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="#">Trabalhando com modais</a>
+                                                    </td>
+                                                    <td class="hidden-xs">
+                                                        <a class="btn btn-xs btn-info" href="#">Detalhes</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="#">O que é um Framework</a>
+                                                    </td>
+                                                    <td class="hidden-xs">
+                                                        <a class="btn btn-xs btn-info" href="#">Detalhes</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="#">Utilizando Scrollspy</a>
+                                                    </td>
+                                                    <td class="hidden-xs">
+                                                        <a class="btn btn-xs btn-info" href="#">Detalhes</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="panel panel-warning">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Categorias</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Nome</th>
+                                                    <th class="hidden-xs">Ações</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a href="#">Front-end</a>
+                                                    </td>
+                                                    <td class="hidden-xs">
+                                                        <a class="btn btn-xs btn-warning" href="#">Editar</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="#">Back-end</a>
+                                                    </td>
+                                                    <td class="hidden-xs">
+                                                        <a class="btn btn-xs btn-warning" href="#">Editar</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="#">Database</a>
+                                                    </td>
+                                                    <td class="hidden-xs">
+                                                        <a class="btn btn-xs btn-warning" href="#">Editar</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="#">Mobile</a>
+                                                    </td>
+                                                    <td class="hidden-xs">
+                                                        <a class="btn btn-xs btn-warning" href="#">Editar</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container body-content">
+                            @RenderBody()
+                            <hr />
+                            <footer>
+                                <p>&copy; @DateTime.Now.Year - EngeSoft Sistemas</p>
+                            </footer>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/script.js"></script>
+    @RenderSection("scripts", required: false)
+
+    @*<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>*@
+</body>
+</html>
